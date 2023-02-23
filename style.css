@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* background Color */
+
+.dark {
+    background: #222;
+}
+
+.white {
+    background: whitesmoke;
+}
+
+/** Background Color **/
+
+.overflow, .circle-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.overflow {
+    z-index: 9998;
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle-line {
+    z-index: 9999;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle-1,.circle-2,.circle-3,.circle-4,.circle-5{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    margin: 7px;
+}
+
+.circle-1 {
+    background-color: rgba(124, 82, 255, 1);
+  animation: movingUp 0.5s .6s infinite alternate;  
+  
+}
+
+.circle-2 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingLeft 0.5s .6s infinite alternate;
+
+   
+}
+
+
+
+.circle-3 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp 0.5s .6s infinite alternate;
+    
+  
+}
+
+.circle-4 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingRight 0.5s .6s infinite alternate;
+
+    
+}
+.circle-5 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp 0.5s .6s infinite alternate; 
+    
+}
+
+/* CSS ANIMATION */
+
+@keyframes movingUp {
+    from {
+    
+        top: 0px;
+        
+    }
+
+    to {
+        
+        top: -10px;
+    }
+}
+
+@keyframes movingLeft {
+
+    to {
+       
+        transform-origin: top left;
+        transform-style: preserve-3D;
+        transform: rotate(-100deg);
+      }
+  
+}
+
+@keyframes movingRight {
+
+      
+      to {
+       
+        transform-origin: top right;
+        transform-style: preserve-3D;
+        transform: rotate(100deg);
+      }
+}
