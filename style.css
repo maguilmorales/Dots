@@ -15,12 +15,7 @@
 
 /** Background Color **/
 
-.overflow, .circle-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 .overflow {
     z-index: 9998;
     width: 100vw;
@@ -35,47 +30,74 @@
     justify-content: center;
 }
 
-.circle-1,.circle-2,.circle-3,.circle-4,.circle-5{
+.circle-1,.circle-2,.circle-3,.circle-4,.circle-5,.circle-6,.circle-7,.circle-8,.circle-9,.circle-10,.circle-11,.circle-12,.circle-13{
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 30px;
     margin: 7px;
 }
 
 .circle-1 {
     background-color: rgba(124, 82, 255, 1);
-  animation: movingUp 0.5s .6s infinite alternate;  
-  
 }
 
 .circle-2 {
     background-color: rgba(124, 82, 255, 1);
     animation: movingLeft 0.5s .6s infinite alternate;
-
-   
 }
-
-
 
 .circle-3 {
     background-color: rgba(124, 82, 255, 1);
     animation: movingUp 0.5s .6s infinite alternate;
-    
-  
 }
 
 .circle-4 {
     background-color: rgba(124, 82, 255, 1);
     animation: movingRight 0.5s .6s infinite alternate;
-
-    
 }
 .circle-5 {
-    background-color: rgba(124, 82, 255, 1);
-    animation: movingUp 0.5s .6s infinite alternate; 
-    
+    background-color: rgba(124, 82, 255, 1); 
 }
+.circle-6 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp2 0.5s .5s infinite alternate;
+}
+
+.circle-7 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp2 0.5s .6s infinite alternate;
+}
+
+.circle-8 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp2 0.5s .7s infinite alternate;
+}
+
+.circle-9 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp2 0.5s .8s infinite alternate;
+}
+.circle-10 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp3 0.5s .3s infinite alternate ease-in-out;
+}
+
+.circle-11 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp3 0.5s .4s infinite alternate ease-in-out;
+}
+
+.circle-12 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp3 0.5s .5s infinite alternate ease-in-out;
+}
+
+.circle-13 {
+    background-color: rgba(124, 82, 255, 1);
+    animation: movingUp3 0.5s .6s infinite alternate ease-in-out;
+}
+
 
 /* CSS ANIMATION */
 
@@ -91,14 +113,40 @@
         top: -10px;
     }
 }
+@keyframes movingUp2 {
+    from {
+    
+        top: 0px;
+        
+    }
+
+    to {
+        
+        top: -20px;
+    }
+}
+@keyframes movingUp3 {
+    from {
+    
+        top: 0px;
+        transform: scale(100%);
+        
+    }
+
+    to {
+        
+        top: 0px;
+        transform: scale(0%);
+    }
+}
 
 @keyframes movingLeft {
 
     to {
        
-        transform-origin: top left;
+        transform-origin: bottom left;
         transform-style: preserve-3D;
-        transform: rotate(-100deg);
+        transform: rotate(100deg);
       }
   
 }
